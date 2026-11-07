@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- El "parent" aporta versiones compatibles de todas las librerías (BOM)
+         y la configuración por defecto de los plugins de Maven. -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.7</version>
+        <relativePath/> <!-- se resuelve desde el repositorio, no desde el disco -->
+    </parent>
+
+    <groupId>com.example</groupId>
+    <artifactId>act1-t4</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>act1-t4</name>
+    <description>Actividad 1 - Tema 4: API REST básica con Spring Boot desplegada en un VPS</description>
+
+    <properties>
+        <!-- Versión de Java con la que se compila. Debe ser menor o igual a la del JDK
+             instalado en tu equipo y en el VPS. -->
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Web: Spring MVC + Tomcat embebido + Jackson (JSON) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Pruebas: JUnit 5, Mockito, MockMvc, JsonPath, AssertJ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- Nombre fijo del .jar generado: target/act1-t4.jar -->
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!-- Empaqueta la aplicación como "fat jar" ejecutable con java -jar -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

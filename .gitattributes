@@ -1,0 +1,10 @@
+# Normaliza los finales de línea para que el proyecto se comporte igual en Windows, macOS y Linux
+* text=auto eol=lf
+
+# Los scripts de shell deben conservar siempre LF
+*.sh text eol=lf
+
+# Archivos binarios
+*.jar binary
+*.png binary
+*.jpg binary

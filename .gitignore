@@ -1,0 +1,80 @@
+# ---------------------------------------------------------------------------
+# Maven / compilación
+# ---------------------------------------------------------------------------
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+dependency-reduced-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# ---------------------------------------------------------------------------
+# Gradle (por si se migra el proyecto)
+# ---------------------------------------------------------------------------
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ---------------------------------------------------------------------------
+# IDEs
+# ---------------------------------------------------------------------------
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse / Spring Tool Suite
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Visual Studio Code
+.vscode/
+
+# ---------------------------------------------------------------------------
+# Sistema operativo
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ---------------------------------------------------------------------------
+# Logs, PIDs y archivos temporales
+# ---------------------------------------------------------------------------
+*.log
+logs/
+*.pid
+nohup.out
+*.tmp
+*.swp
+*~
+HELP.md
+
+# ---------------------------------------------------------------------------
+# Secretos y configuración local (nunca subir al repositorio)
+# ---------------------------------------------------------------------------
+.env
+.env.*
+application-local.properties
+application-local.yml
+*.pem
+*.key
