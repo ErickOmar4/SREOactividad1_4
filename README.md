@@ -2,13 +2,8 @@
 
 > Proyecto didáctico de la **Actividad 1 – Tema 4**: una API REST mínima construida con
 > **Spring Boot** que se prueba en local y se despliega como archivo `.jar` en un **VPS**
-> con `nohup`. Está documentado para que cualquier persona que quiera aprender pueda
-> reproducirlo de principio a fin.
+> con `nohup`. 
 
-> **Antes de empezar:** reemplaza `INICIALES` y `Apellidos Nombre` en
-> [`src/main/resources/application.properties`](src/main/resources/application.properties)
-> (propiedades `proyecto.nombre` y `proyecto.autor`) y renombra el repositorio con el
-> formato `TUSINICIALESact1_t4`.
 
 ## Tabla de contenido
 
@@ -181,8 +176,8 @@ git --version
 ### 4.1 Obtener el código
 
 ```bash
-git clone https://github.com/TU_USUARIO/TUSINICIALESact1_t4.git
-cd TUSINICIALESact1_t4
+git clone enlace de este repositorio ...
+
 ```
 
 ### 4.2 Personalizar (una sola vez)
