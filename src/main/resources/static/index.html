@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de la API · act1-t4</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <span class="etiqueta">Spring Boot · API REST</span>
+      <h1>Panel de la API</h1>
+      <p> primer proyecto desde Spring Initializr </p>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <div class="nota">
+      <strong>¿Cómo funciona?</strong> Cada tarjeta es un endpoint. <strong>Ver resultado</strong> abre una página
+      con la respuesta en tabla; <strong>Ver API</strong> abre la dirección real (JSON sin formato) en una pestaña nueva.
+      La ruta que se va a consultar aparece arriba de cada formulario y se actualiza mientras escribes.
+    </div>
+
+    <!-- ===================== PROYECTO ===================== -->
+    <h2 class="seccion-titulo">Proyecto</h2>
+    <div class="rejilla">
+
+      <section class="tarjeta">
+        <h2>Nombre del proyecto</h2>
+        <p class="descripcion">Devuelve el nombre del proyecto. Sirve para identificar de quién es la instancia que está corriendo.</p>
+        <span class="ruta mono"><b>GET</b><span data-ruta>/api/proyecto/nombre</span></span>
+        <form data-ruta-base="/api/proyecto/nombre">
+          <div class="acciones">
+            <button type="submit" class="boton boton--principal" data-accion="resultado">Ver resultado</button>
+            <button type="button" class="boton boton--secundario" data-accion="api">Ver API</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Estado del servidor</h2>
+        <p class="descripcion">Objeto JSON con el estado, el autor, la versión de Java, el puerto y la fecha del servidor.</p>
+        <span class="ruta mono"><b>GET</b><span data-ruta>/api/proyecto/estado</span></span>
+        <form data-ruta-base="/api/proyecto/estado">
+          <div class="acciones">
+            <button type="submit" class="boton boton--principal" data-accion="resultado">Ver resultado</button>
+            <button type="button" class="boton boton--secundario" data-accion="api">Ver API</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- ===================== MATERIAS ===================== -->
+    <h2 class="seccion-titulo">Materias</h2>
+    <div class="rejilla">
+
+      <section class="tarjeta">
+        <h2>Todas las materias</h2>
+        <p class="descripcion">Lista completa de materias (datos simulados).</p>
+        <span class="ruta mono"><b>GET</b><span data-ruta>/api/materias</span></span>
+        <form data-ruta-base="/api/materias">
+          <div class="acciones">
+            <button type="submit" class="boton boton--principal" data-accion="resultado">Ver resultado</button>
+            <button type="button" class="boton boton--secundario" data-accion="api">Ver API</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Buscar por ID</h2>
+        <p class="descripcion">Devuelve una sola materia. Si el ID no existe, la API responde 404.</p>
+        <span class="ruta mono"><b>GET</b><span data-ruta>/api/materias/{id}</span></span>
+        <form data-ruta-base="/api/materias" data-ruta-id="id">
+          <div class="campos">
+            <label>ID de la materia
+              <input type="number" name="id" min="1" step="1" placeholder="Ej. 2" required>
+            </label>
+          </div>
+          <div class="acciones">
+            <button type="submit" class="boton boton--principal" data-accion="resultado">Ver resultado</button>
+            <button type="button" class="boton boton--secundario" data-accion="api">Ver API</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="tarjeta tarjeta--ancha">
+        <h2>Buscar con filtros</h2>
+        <p class="descripcion">Todos los campos son opcionales y se pueden combinar. El nombre no distingue mayúsculas ni acentos
+          (<em>programacion</em> encuentra <em>Programación</em>).</p>
+        <span class="ruta mono"><b>GET</b><span data-ruta>/api/materias</span></span>
+        <form data-ruta-base="/api/materias">
+          <div class="campos">
+            <label>Nombre (contiene)
+              <input type="text" name="nombre" placeholder="Ej. datos" autocomplete="off">
+            </label>
+            <label>Créditos
+              <input type="number" name="creditos" min="0" step="1" placeholder="Ej. 5">
+            </label>
+            <label>Semestre
+              <input type="number" name="semestre" min="1" step="1" placeholder="Ej. 4">
+            </label>
+          </div>
+          <div class="acciones">
+            <button type="submit" class="boton boton--principal" data-accion="resultado">Ver resultado</button>
+            <button type="button" class="boton boton--secundario" data-accion="api">Ver API</button>
+            <button type="reset" class="boton boton--suave">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">Actividad 1 · Tema 4 · Spring Boot —</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

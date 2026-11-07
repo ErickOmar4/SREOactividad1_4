@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultado de la API · act1-t4</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <span class="etiqueta">Resultado</span>
+      <h1>Respuesta de la API</h1>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <div class="barra">
+      <a class="boton boton--secundario" href="index.html">← Volver al panel</a>
+      <a class="boton boton--principal" id="btn-api" href="#" target="_blank" rel="noopener">Ver API tal cual</a>
+      <button type="button" class="boton boton--suave" id="btn-copiar">Copiar URL</button>
+    </div>
+
+    <div class="resumen" id="resumen" hidden>
+      <div><span>Método</span> <strong>GET</strong></div>
+      <div><span>Ruta</span> <code id="r-ruta"></code></div>
+      <div><span>Estado</span> <strong class="estado" id="r-estado"></strong></div>
+      <div><span>Tiempo</span> <strong id="r-tiempo"></strong></div>
+    </div>
+
+    <div id="contenido"><p class="vacio">Cargando…</p></div>
+
+    <details id="detalle-json" hidden>
+      <summary>Ver JSON sin formato</summary>
+      <pre id="json-crudo"></pre>
+    </details>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">Actividad 1 · Tema 4 · Spring Boot</div>
+  </footer>
+
+  <script src="js/resultado.js"></script>
+</body>
+</html>
